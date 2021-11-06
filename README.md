@@ -1,4 +1,4 @@
-# Filmes adatbázis
+# Filmes adatbázis: https://cinema-pal.herokuapp.com/
 
 Napjainkban világszerte az egyik legszórakoztatóbb és legközkedveltebb szabadidős tevékenység a filmek és filmsorozatok nézése.
 Ezek online módon, akár otthonról is kényelmesen és gyorsan, csupán néhány egérkattintással elérhetőek filmes adatbázisokból.
