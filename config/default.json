@@ -1,0 +1,8 @@
+{
+    "database": {
+        "dbType": "mongodb+srv://",
+        "dbUser": "ambrus-pal:",
+        "dbPassword": "ambrus-pal",
+        "dbHost": "@cluster1.4bjqt.mongodb.net/movie-project?retryWrites=true&w=majority"
+    }
+}

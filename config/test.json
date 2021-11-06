@@ -1,0 +1,8 @@
+{
+    "testDatabase": {
+        "dbType": "mongodb://",
+        "dbUser": "",
+        "dbPassword": "",
+        "dbHost": "127.0.0.1:27017/remek-testDb"
+    }
+}

@@ -1,0 +1,488 @@
+openapi: 3.0.0
+
+info:
+  title: Movie database application
+  description: Movie database application, where people can search for movies and watch them
+  version: '1.0.0'
+  contact:
+    name: Pál Ambrus
+    email: phaal83@gmail.com
+
+servers:
+  - url: http://localhost:3000
+    description: Movie database application url
+
+paths:
+  /register:
+    post:
+      summary: This endpoint should receive a new user object
+      description: Calling this endpoint should receive a user-object and sends an object in response
+      tags:
+        - Save new user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+        required: true
+      responses:
+        '201':
+          description: New User object has been successfully saved and an object has been sent back in response along with status code
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  firstName:
+                    type: string
+                  lastName:
+                    type: string
+                  email:
+                    type: string
+        '400':
+          description: The server could not understand the request due to invalid syntax
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: The server has encountered a server-side error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /login:
+    post:
+      summary: This endpoint should receive an object
+      description: Calling this endpoint should receive a JSON object for logging in and sends back a response object with user-data
+      tags:
+        - User login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginUser'
+        required: true
+      responses:
+        '200':
+          description: User is found in database
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accessToken:
+                    type: string
+                  refreshToken:
+                    type: string
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  role:
+                    type: string
+                  movies:
+                    type: array
+                    items:
+                      type: object
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: User is not found in database
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: The server has encountered a server-side error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /refresh:
+    post:
+      summary: This endpoint refreshes the token of the client
+      description: Calling this endpoint verifies the token from the client and if the verification is successful, sends back a new one
+      tags:
+        - User-token refresh
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+      responses:
+        '200':
+          description: New token created and has been sent back successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accessToken:
+                    type: string
+        '401':
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: The server has encountered a server-side error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /logout:
+    post:
+      summary: This endpoint logs out a user
+      description: Calling this endpoint logs out the user by removing it's refresh token from database and sends back an empty object
+      tags:
+        - User logout
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+      responses:
+        '200':
+          description: Logout is successful
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: The server has encountered a server-side error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /movies:
+    get:
+      summary: This endpoint should return a movie-list
+      description: Calling this endpoint should send back a movie-list, consisting movie-objects
+      tags:
+        - Listing all movies
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: All the movies have been sent back successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Movie'
+        '404':
+          description: No movie(s) found in database
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: The server has encountered a server-side error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /movies/{attribute}/{value}:
+    get:
+      summary: This endpoint should return a movie-list by a given attribute and value
+      description: Calling this endpoint should return a movie-list, chosen by a given attribute and a given value
+      tags:
+        - Getting movies by an attribute and a value
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: attribute
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: value
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: The selected movies have been sent back successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Movie'
+        '400':
+          description: Invalid or not existing parameter(s) in the path
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Movie(s) not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: The server has encountered a server-side error
+          content:
+            applcation/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /users/{userId}/{movieId}:
+    put:
+      summary: This endpoint should save a movie id in a user object
+      description: Calling this endpoint should upgrade an existing user-object movies list with a movie-object's id
+      tags:
+        - Add movie to the user
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: movieId
+          required: true
+          schema:
+            type: string
+      responses:
+        '201':
+          description: Newly watched movie-id added to the user's movies list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  role:
+                    type: string
+                  movies:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Movie'
+        '400':
+          description: Invalid or not existing parameter(s) in the path
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: UserId or MovieId is invalid or the server has encountered a server-side error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /directors/{name}:
+    get:
+      summary: This endpoint returns a director
+      description: Calling this endpoint returns a director-object, chosen by a name
+      tags:
+        - Getting director with movies
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: name
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A director-object has been returned
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Director'
+        '400':
+          description: Not existing or invalid parameter in the path
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: No director found with that name
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: The server has encountered a server-side error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    User:
+      type: object
+      required:
+        - firstName
+        - lastName
+        - birthYear
+        - email
+        - password
+        - gender
+        #- role
+        #- movies
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        birthYear:
+          type: integer
+        gender:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        movies:
+          type: array
+          items:
+            type: string
+      example:
+        firstName: Ambrus
+        lastName: Pál
+        birthYear: 1983
+        email: phaal83@gmail.com
+        password: ajelszom
+        gender: male
+        #role: user
+        #movies: ['24ssf45rdf3st4', 'ds34sf2tddfww3', 'fdsf876sdff6sf5']
+
+    LoginUser:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+      example:
+        email: phaal83@gmail.com
+        password: ajelszom
+
+    Movie:
+      type: object
+      required:
+        - _id
+        - imgUrl
+        - title
+        - category
+        - director
+        - duration
+        - description
+        - ageRating
+      properties:
+        _id:
+          type: string
+        imgUrl:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        director:
+          type: string
+        duration:
+          type: integer
+        category:
+          type: string
+        ageRating:
+          type: integer
+      example:
+        _id: '98dsfv7bcb97cvb77c7b'
+        imgUrl: https://images.unsplash.com/photo-1625088783318-d137c6bc260f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80
+        title: The big country
+        category: adventure
+        director: William Wyler
+        duration: 129
+        description: This movie is about a nice stranger in the far west
+        ageRating: 12
+
+    Director:
+      required:
+        - imgUrl
+        - name
+        - birthYear
+        - story
+        - movies
+      properties:
+        imgUrl:
+          type: string
+        name:
+          type: string
+        birthYear:
+          type: integer
+        story:
+          type: string
+        movies:
+          type: array
+          items:
+            type: string
+      example:
+        imgUrl: splash/image.jpg.com
+        name: Steven Spielberg
+        birthYear: 1935
+        story: He was born on july 4 in Germany
+        #movies: ['1dadda3432fsdf', 'fdg45fggh56e22']
+
+    Error:
+      type: object
+      required:
+        - status
+        - error
+      properties:
+        statusCode:
+          type: integer
+        message:
+          type: string
+      example:
+        status: 400
+        error: Something went wrong on server side!
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
