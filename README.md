@@ -21,8 +21,7 @@ Megjegyzés:
 
 Tesztek futtatása:
 
-- Nyitni kell egy új terminált és belépni itt is a `server` mappába.
-- Végül minden teszt futtatása: `npm run test`
+- Külön terminálban: `npm run test`
 
 ### Docker nélkül
 

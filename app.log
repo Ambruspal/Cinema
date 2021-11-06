@@ -7845,3 +7845,94 @@
 {"message":"POST request has arrived to /logout endpoint at 2021. 11. 06. 17:21:50","level":"info"}
 {"message":"Error occured: 401, Unauthorized request!","level":"error"}
 {"message":"POST req/res to /logout with code 401\n","level":"info"}
+{"message":"GET request has arrived to / endpoint at 2021. 11. 06. 18:07:47","level":"info"}
+{"message":"GET req/res to / with code 304\n","level":"info"}
+{"message":"GET request has arrived to /styles.06c690246265c07edbdf.css endpoint at 2021. 11. 06. 18:07:47","level":"info"}
+{"message":"GET request has arrived to /runtime.7b63b9fd40098a2e8207.js endpoint at 2021. 11. 06. 18:07:47","level":"info"}
+{"message":"GET req/res to /styles.06c690246265c07edbdf.css with code 304\n","level":"info"}
+{"message":"GET req/res to /runtime.7b63b9fd40098a2e8207.js with code 304\n","level":"info"}
+{"message":"GET request has arrived to /polyfills.94daefd414b8355106ab.js endpoint at 2021. 11. 06. 18:07:47","level":"info"}
+{"message":"GET request has arrived to /main.c02320b9e07ae4e6e9aa.js endpoint at 2021. 11. 06. 18:07:47","level":"info"}
+{"message":"GET req/res to /polyfills.94daefd414b8355106ab.js with code 304\n","level":"info"}
+{"message":"GET req/res to /main.c02320b9e07ae4e6e9aa.js with code 304\n","level":"info"}
+{"message":"GET request has arrived to /main.56ee1f016781005192c8.jpg endpoint at 2021. 11. 06. 18:07:47","level":"info"}
+{"message":"GET req/res to /main.56ee1f016781005192c8.jpg with code 304\n","level":"info"}
+{"message":"GET request has arrived to /api-doc/ endpoint at 2021. 11. 06. 18:10:06","level":"info"}
+{"message":"GET req/res to /api-doc/ with code 304\n","level":"info"}
+{"message":"GET request has arrived to /api-doc/swagger-ui.css endpoint at 2021. 11. 06. 18:10:06","level":"info"}
+{"message":"GET request has arrived to /api-doc/swagger-ui-bundle.js endpoint at 2021. 11. 06. 18:10:06","level":"info"}
+{"message":"GET req/res to /api-doc/swagger-ui.css with code 304\n","level":"info"}
+{"message":"GET req/res to /api-doc/swagger-ui-bundle.js with code 304\n","level":"info"}
+{"message":"GET request has arrived to /api-doc/swagger-ui-standalone-preset.js endpoint at 2021. 11. 06. 18:10:06","level":"info"}
+{"message":"GET request has arrived to /api-doc/swagger-ui-init.js endpoint at 2021. 11. 06. 18:10:06","level":"info"}
+{"message":"GET req/res to /api-doc/swagger-ui-init.js with code 304\n","level":"info"}
+{"message":"GET req/res to /api-doc/swagger-ui-standalone-preset.js with code 304\n","level":"info"}
+{"message":"GET request has arrived to /login.e098692ddc946af5e871.jpg endpoint at 2021. 11. 06. 18:10:09","level":"info"}
+{"message":"GET req/res to /login.e098692ddc946af5e871.jpg with code 304\n","level":"info"}
+{"message":"POST request has arrived to /login endpoint at 2021. 11. 06. 18:10:12","level":"info"}
+{"message":"POST req/res to /login with code 200\n","level":"info"}
+{"message":"GET req/res to /images/Gladi%C3%A1tor.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/Holnap-h%C3%A1bor%C3%BAja.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/bogyo.jpg with code 304\n","level":"info"}
+{"message":"GET request has arrived to /user-movies.2ea4a5a5dcb821475526.jpg endpoint at 2021. 11. 06. 18:10:12","level":"info"}
+{"message":"GET req/res to /user-movies.2ea4a5a5dcb821475526.jpg with code 304\n","level":"info"}
+{"message":"PUT request has arrived to /users/6186b04e0b12922b0460cf19/60f82cbd8e9d91372ce488bb endpoint at 2021. 11. 06. 18:10:15","level":"info"}
+{"message":"PUT req/res to /users/6186b04e0b12922b0460cf19/60f82cbd8e9d91372ce488bb with code 201\n","level":"info"}
+{"message":"GET request has arrived to /movies endpoint at 2021. 11. 06. 18:10:17","level":"info"}
+{"message":"GET request has arrived to /search.c63c4e910c13e586061a.jpg endpoint at 2021. 11. 06. 18:10:17","level":"info"}
+{"message":"GET req/res to /search.c63c4e910c13e586061a.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /movies with code 304\n","level":"info"}
+{"message":"GET request has arrived to /movies endpoint at 2021. 11. 06. 18:10:18","level":"info"}
+{"message":"GET req/res to /movies with code 304\n","level":"info"}
+{"message":"GET req/res to /images/Idegen-a-cowboyok-k%C3%B6z%C3%B6tt.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/A-f%C3%BCggetlens%C3%A9g-napja.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/Ben-hur.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/NevemSenki.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/Fegyverek-szava.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/iceage.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/Sithek-bossz%C3%BAja.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/panda.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/negy.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/oscar.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/kisertet.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/spartacus.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/dinamit.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/csillagok.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/vadnyugat.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/m%C3%A9ly%C3%BCt%C3%A9s.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/az.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/rettenthetetlen.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/eletrevalok.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/csaj.jpg with code 304\n","level":"info"}
+{"message":"PUT request has arrived to /users/6186b04e0b12922b0460cf19/60f82c618e9d91372ce488ad endpoint at 2021. 11. 06. 18:10:20","level":"info"}
+{"message":"PUT req/res to /users/6186b04e0b12922b0460cf19/60f82c618e9d91372ce488ad with code 201\n","level":"info"}
+{"message":"GET request has arrived to /movies endpoint at 2021. 11. 06. 18:10:22","level":"info"}
+{"message":"GET req/res to /movies with code 304\n","level":"info"}
+{"message":"GET request has arrived to /directors/Chris%20Wedge endpoint at 2021. 11. 06. 18:10:24","level":"info"}
+{"message":"GET req/res to /directors/Chris%20Wedge with code 304\n","level":"info"}
+{"message":"GET req/res to /images/chris.jpg with code 304\n","level":"info"}
+{"message":"PUT request has arrived to /users/6186b04e0b12922b0460cf19/60f82d238e9d91372ce488cb endpoint at 2021. 11. 06. 18:10:26","level":"info"}
+{"message":"PUT req/res to /users/6186b04e0b12922b0460cf19/60f82d238e9d91372ce488cb with code 201\n","level":"info"}
+{"message":"GET req/res to /images/Holnap-h%C3%A1bor%C3%BAja.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/Gladi%C3%A1tor.jpg with code 304\n","level":"info"}
+{"message":"GET req/res to /images/A-f%C3%BCggetlens%C3%A9g-napja.jpg with code 304\n","level":"info"}
+{"message":"GET request has arrived to /movies endpoint at 2021. 11. 06. 18:10:28","level":"info"}
+{"message":"GET req/res to /movies with code 304\n","level":"info"}
+{"message":"GET request has arrived to /movies/title/Gladi%C3%A1tor endpoint at 2021. 11. 06. 18:10:30","level":"info"}
+{"message":"GET req/res to /movies/title/Gladi%C3%A1tor with code 304\n","level":"info"}
+{"message":"PUT request has arrived to /users/6186b04e0b12922b0460cf19/60f82c7e8e9d91372ce488b1 endpoint at 2021. 11. 06. 18:10:32","level":"info"}
+{"message":"PUT req/res to /users/6186b04e0b12922b0460cf19/60f82c7e8e9d91372ce488b1 with code 201\n","level":"info"}
+{"message":"POST request has arrived to /logout endpoint at 2021. 11. 06. 18:10:34","level":"info"}
+{"message":"POST req/res to /logout with code 200\n","level":"info"}
+{"message":"GET request has arrived to /api-doc/ endpoint at 2021. 11. 06. 18:10:40","level":"info"}
+{"message":"GET req/res to /api-doc/ with code 304\n","level":"info"}
+{"message":"GET request has arrived to /api-doc/swagger-ui.css endpoint at 2021. 11. 06. 18:10:40","level":"info"}
+{"message":"GET request has arrived to /api-doc/swagger-ui-bundle.js endpoint at 2021. 11. 06. 18:10:40","level":"info"}
+{"message":"GET req/res to /api-doc/swagger-ui.css with code 304\n","level":"info"}
+{"message":"GET request has arrived to /api-doc/swagger-ui-standalone-preset.js endpoint at 2021. 11. 06. 18:10:40","level":"info"}
+{"message":"GET req/res to /api-doc/swagger-ui-bundle.js with code 304\n","level":"info"}
+{"message":"GET request has arrived to /api-doc/swagger-ui-init.js endpoint at 2021. 11. 06. 18:10:40","level":"info"}
+{"message":"GET req/res to /api-doc/swagger-ui-init.js with code 304\n","level":"info"}
+{"message":"GET req/res to /api-doc/swagger-ui-standalone-preset.js with code 304\n","level":"info"}
+{"message":"GET request has arrived to /api-doc/favicon-32x32.png endpoint at 2021. 11. 06. 18:10:40","level":"info"}
+{"message":"GET req/res to /api-doc/favicon-32x32.png with code 304\n","level":"info"}
