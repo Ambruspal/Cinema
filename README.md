@@ -32,7 +32,7 @@ Tesztek futtatása:
 ### User
 
 Egy felhasználó, aki regisztrál az alkalmazásba, megadva nevét, nemét, születési évét, email címét és jelszavát.
-(Hash-elve kerül elmentésre az adatbázisban.)
+(A jelszó hash-elve kerül elmentésre az adatbázisban.)
 Regisztráció és belépés után látható, hogy mely filmeket tekintette már meg.
 Továbbá megnézheti a kiválasztott filmet, amely bekerül a megnézett filmjeinek listájába.
 Ilyen módon, egy user-hez több film is tartozhat.
