@@ -1,6 +1,6 @@
 require('dotenv').config();
 const config = require('config');
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 const logger = require('./logger/logger');
 
 const app = require('./server');
@@ -27,6 +27,6 @@ mongoose
         process.exit();
     });
 
-app.listen(port, () => {
-    logger.debug(`Server is running on http://localhost:${port}`);
+app.listen(PORT, () => {
+    logger.debug(`Server is running on http://localhost:${PORT}`);
 });
