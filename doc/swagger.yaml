@@ -9,8 +9,10 @@ info:
     email: phaal83@gmail.com
 
 servers:
+  - url: https://cinema-pal.herokuapp.com/
+    description: When running on heroku
   - url: http://localhost:3000
-    description: Movie database application url
+    description: When running on localhost
 
 paths:
   /register:
