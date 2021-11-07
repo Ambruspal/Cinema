@@ -9,7 +9,7 @@ info:
     email: phaal83@gmail.com
 
 servers:
-  - url: https://cinema-pal.herokuapp.com/
+  - url: https://cinema-pal.herokuapp.com
     description: When running on heroku
   - url: http://localhost:3000
     description: When running on localhost
