@@ -159,5 +159,5 @@ Csak bejelentkezett állapotban érhető el.
 Az alkalmazás swagger dokumentációja a szerver alól futtatható az alábbi végponton:
 
 ```
-- http://localhost:3000/api-doc
+- https://cinema-pal.herokuapp.com/api-doc
 ```
